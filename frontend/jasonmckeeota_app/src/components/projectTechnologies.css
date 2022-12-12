@@ -1,0 +1,12 @@
+#techList {
+    display: inline;
+    list-style: none;
+}
+
+#techList li:after {
+    content: ", ";
+  }
+
+  #techList li:last-child:after {
+    content: "";
+}
