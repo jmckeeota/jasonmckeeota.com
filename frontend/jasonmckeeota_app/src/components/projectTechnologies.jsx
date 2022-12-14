@@ -2,12 +2,11 @@ import './projectTechnologies.css'
 
 function ProjectTechnologies({ data }) {
   return (
-    <ul id="techList">
-      {data.technologies.map((technology) => (
-        <li>{technology}</li>
+    <div>
+    {data.technologies.map((technology) => (
+       <p key={technology} id="techList">{technology}, </p> 
       ))}
-    </ul>
-  );
+  </div>)
 }
 
 export default ProjectTechnologies;

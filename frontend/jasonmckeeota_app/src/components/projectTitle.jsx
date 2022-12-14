@@ -5,7 +5,7 @@ function ProjectTitle({data}) {
         <img
           src={data.picture}
           alt="picture"
-          class="fluid"
+          className="fluid"
           style={{ height: "100px" }}
         />
         {data.title}

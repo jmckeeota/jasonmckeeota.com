@@ -1,9 +1,7 @@
 function ProjectDescription({data}) {
     return ( 
-        <div>
+        <div id="desctiption_div">
         <p>{data.description}</p>
-        <div>{data.github ? <a href={data.github}>Show me the Github! </a> : (<p>No github yet.</p>)}</div>
-        <div>{data.instance ? <a href={data.instance}>See it in action here! </a> : (<p>No instances running yet.</p>)}</div>
         </div>
 
      );

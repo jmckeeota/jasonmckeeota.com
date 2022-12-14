@@ -1,12 +1,14 @@
 #techList {
     display: inline;
     list-style: none;
+    word-wrap: normal;
 }
 
 #techList li:after {
+    display: inline;
     content: ", ";
   }
 
-  #techList li:last-child:after {
+#techList li:last-child:after {
     content: "";
 }
