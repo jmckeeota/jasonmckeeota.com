@@ -10,7 +10,8 @@ function ProjectComponent({ data }) {
   const ref = useRef(null);
 
   return (
-    <div className="min-vh-100 bg-primary bg-gradient" id={data.title}>
+    // <div className="min-vh-100 bg-primary bg-gradient" id={data.title}>
+    <div className="vh-100 bg-primary bg-gradient" id={data.title}>
       <div id={"anchor " + data.title} className="anchor" ref={ref}></div>
       <Container>
         <ProjectTitle data={data} />

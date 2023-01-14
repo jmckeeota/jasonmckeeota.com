@@ -4,7 +4,7 @@ function PresentationImage() {
     return(
         <div>
         <Image
-        src="./BASIC_Prompt.gif" fluid>
+        src="./BASIC_Prompt.gif">
         </Image>
         </div>
     )

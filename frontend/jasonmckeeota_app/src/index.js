@@ -15,7 +15,8 @@ const projectData = [
     technologies: ['python', 'django', 'sql', 'auth tokens', 'backend', 'apis', 'docker', 'zappa'],
     github: 'https://github.com/jmckeeota/Django_Project',
     instance: '',
-    picture: 'robot.png'
+    picture: 'robot.png',
+    background: 'circuit2.jpg'
     },
     {
     id: '2',
@@ -24,7 +25,8 @@ const projectData = [
     technologies: ['terraform', 'ECS', 'aws', 'load balancing'],
     github: 'https://github.com/jmckeeota/terraform_3_tier_ecs_example',
     instance: '',
-    picture: 'terraform.png'
+    picture: 'terraform.png',
+    background: 'planet2.jpg'
     },
     {
     id: '3',
@@ -33,7 +35,8 @@ const projectData = [
     technologies: ['django', 'aws', 'python', 'terraform'],
     github: 'https://github.com/jmckeeota/foodFixer',
     instance: 'https://tqhtyaz1ui.execute-api.us-west-2.amazonaws.com/foodFixerDev/app_models/',
-    picture: 'foodFixer.png'
+    picture: 'foodFixer.png',
+    background: 'chocolate.png'
     }
 ];
 
@@ -45,6 +48,7 @@ const dynamicIntroData = {
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
+        <div className="p-4 bg-primary"></div>
         <BrowserRouter>
         <MyBar data={projectData}/>
         <div>
