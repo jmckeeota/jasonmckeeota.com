@@ -1,9 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
-import PresentationComponent from "./components/presentationComponent";
-import ContainerFluidExampleComponent from "./components/conainerFluidExampleComponent";
-import ProjectComponent from "./components/projectComponent";
+import Main from "./main.jsx";
+import { BrowserRouter } from "react-router-dom";
+import MyBar from "./components/myBar";
+import Container from "react-bootstrap/esm/Container";
+
+
 const projectData = [
     {
     id: '1',
@@ -28,8 +31,8 @@ const projectData = [
     title: 'Food Fixer',
     description: 'An app that helps you prepare for meals in a unique way',
     technologies: ['django', 'aws', 'python', 'terraform'],
-    github: '',
-    instance: '',
+    github: 'https://github.com/jmckeeota/foodFixer',
+    instance: 'https://tqhtyaz1ui.execute-api.us-west-2.amazonaws.com/foodFixerDev/app_models/',
     picture: 'foodFixer.png'
     }
 ];
@@ -38,18 +41,15 @@ const dynamicIntroData = {
     name: 'Jason',
     intro: 'Thank you for taking the time to view this personalized version of my website specifically for your company! I\'ve ensured to include examples here of my abilities to code javascript, backend services, and AWS terraform code. Please click on the links above to see more about each project'
 };
-const root = ReactDOM.createRoot(document.getElementById("root"));
 
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
     <React.StrictMode>
-    <div>
+        <BrowserRouter>
+        <MyBar data={projectData}/>
         <div>
-       <PresentationComponent intro={dynamicIntroData} projectData={projectData} />
-       </div>
-        {projectData.map((pageData) => (
-        <div key={pageData.id}><ProjectComponent data={pageData} /></div>
-      ))}
-        
-</div>
+            <Main projectData={projectData} dynamicIntroData={dynamicIntroData} />
+        </div>
+    </BrowserRouter>
 </React.StrictMode>
 );

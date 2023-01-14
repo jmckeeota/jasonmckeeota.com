@@ -4,10 +4,10 @@ import PresentationText from "./presentationText.jsx";
 import PresentationCarousel from "./presentationCarousel.jsx";
 
 function PresentationComponent({intro, projectData}) {
-
     return ( 
+    
         <div className="min-vh-100 bg-primary bg-gradient">
-        <MyBar data={projectData} />
+
         <ul className="flex-container p-5">
         <PresentationImage />
         <PresentationText intro={intro} />

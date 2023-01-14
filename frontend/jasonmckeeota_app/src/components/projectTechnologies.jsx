@@ -1,6 +1,7 @@
 import './projectTechnologies.css'
 
 function ProjectTechnologies({ data }) {
+  
   return (
     <div>
     {data.technologies.map((technology) => (
